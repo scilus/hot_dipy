@@ -3,8 +3,8 @@ from os.path import splitext, sep as filesep, join as pjoin, relpath
 from hashlib import sha1
 
 import sys
-print(sys.path)
-print(sys.executable)
+raise RuntimeError('Building cythexts.py with interpreter {0} from {1}'.format(
+                   sys.executable, sys.prefix))
 
 from setuptools.command.build_ext import build_ext
 from setuptools.command.sdist import sdist
