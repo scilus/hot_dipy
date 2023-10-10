@@ -2,6 +2,10 @@ import os
 from os.path import splitext, sep as filesep, join as pjoin, relpath
 from hashlib import sha1
 
+import sys
+print(sys.path)
+print(sys.executable)
+
 from setuptools.command.build_ext import build_ext
 from setuptools.command.sdist import sdist
 from packaging.version import Version
